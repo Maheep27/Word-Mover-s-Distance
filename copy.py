@@ -32,6 +32,10 @@ s_2=removestopwords(s2)                                     #After removing stop
 distance_1=model.wmdistance(s_1,s_2)   
 print('distance_1',distance_1)                             # distance_1= 1.1158282554856542 (distance less means similarity high)
 
+#finding similarity from distance because similarity and distance is inversely proportional to each other
+similarity_1=(1/distance_1)
+print('similarity_1',similarity_1)                         #similarity_1 = 0.89619526578914 (89%)
+
 #two sample sentences 
 s3 = 'I will be eating coffee'                             
 s4 = 'I will be drinking coffee'                            
@@ -43,3 +47,7 @@ s_4=removestopwords(s4)                                    #After removing stopw
 #calculate distance between two sentences using WMD algorithm
 distance_2=model.wmdistance(s_3,s_4)                       
 print('distance_2',distance_2)                             # distance_2= 1.0779358435019317 (distance less means similarity high)
+
+#finding similarity from distance because similarity and distance is inversely proportional to each other
+similarity_2=(1/distance_2)
+print('similarity_2',similarity_2)                         #similarity_2 = 0.92769899621416  (92%) 
